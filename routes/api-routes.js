@@ -46,4 +46,26 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/messages", function(req, res){
+    db.messages.findAll()
+      .then(function(messages){
+        res.json(messages);
+      });
+  });
+
+  app.post("/api/messages", function(req, res){
+    db.messages.create({
+      UserId: req.body.UserId,
+      message: req.body.message
+    })
+      .then(function(result){
+        if(result.affectedRows === 0){
+          res.status(500).end();
+        }
+        else{
+          res.status(200).end();
+        }
+      });
+  });
 };
