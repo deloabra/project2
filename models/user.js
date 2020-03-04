@@ -7,10 +7,25 @@ module.exports = function(sequelize, DataTypes) {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
+      unique: true
+    },
+    name: {
+      type: DataTypes.STRING
+    },
+    interest: {
+      type: DataTypes.STRING
+    },
+    goal: {
+      type: DataTypes.STRING
+    },
+    goalUnit: {
+      type: DataTypes.STRING
+    },
+    goalProgress: {
+      type: DataTypes.INTEGER
+    },
+    goalCreatedAt: {
+      type: DataTypes.DATE
     },
     // The password cannot be null
     password: {
@@ -27,5 +42,8 @@ module.exports = function(sequelize, DataTypes) {
   User.addHook("beforeCreate", function(user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
+  User.associate = function(models){
+    User.hasMany(models.messages);
+  };
   return User;
 };
