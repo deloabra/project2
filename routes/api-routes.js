@@ -60,7 +60,7 @@ module.exports = function(app) {
     {
       where: {
         //change this to user.id
-        id: req.body.id
+        id: req.user.id
       }
     })
       .then(function(result){
