@@ -47,6 +47,46 @@ module.exports = function(app) {
     }
   });
 
+  //Assumes req.body has interest, goal, goalUnit
+  //Creates a new goal
+  app.patch("/api/goalCreate", function(req, res){
+    db.User.update({
+      interest: req.body.interest,
+      goal: req.body.goal,
+      goalUnit: req.body.goalUnit,
+      goalProgress: 0,
+      goalCreatedAt: db.sequelize.fn("NOW")
+    },
+    {
+      where: {
+        //change this to user.id
+        id: req.body.id
+      }
+    })
+      .then(function(result){
+        if(result.affectedRows === 0){
+          res.status(500).end();
+        }
+        else{
+          res.status(200).end();
+        }
+      });
+  });
+
+  //Updates the goal progress
+  app.patch("/api/goalUpdate", function(req, res){
+    db.User.update({goalProgress: req.body.goalProgress},
+      {where: {id: req.body.id}})
+      .then(function(result){
+        if(result.affectedRows === 0){
+          res.status(500).end();
+        }
+        else{
+          res.status(200).end();
+        }
+      });
+  });
+
   app.get("/api/messages", function(req, res){
     db.messages.findAll()
       .then(function(messages){
