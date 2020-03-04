@@ -2,3 +2,9 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.navbar.is-fixed-top {
+  color: white;
+  font-size: 18px;
+  background: hsl(275.5, 85.8%, 52.9%);
+}

@@ -10,30 +10,44 @@
 </head>
 
 <body>
-   <nav class="navbar navbar-default bd-color" style= "background: hsl(275.5, 85.8%, 52.9%);">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand brand-text">
+      My Wellness Journey!
+    </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false" href="/index">
+          Home
+        </a>
+        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false" href="/member">
+          Profile
+        </a>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item is-hoverable">
+        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false">
+          Logout
+        </a>
       </div>
     </div>
   </nav>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
-      </div>
+    <div class="columns">
+      <h1 class="title is-1">Login Form</h1>
+      <form class="login">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email-input" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="password-input" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+      <br />
+      <p>Or sign up <a href="/">here</a></p>
     </div>
   </div>
 
