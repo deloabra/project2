@@ -2,85 +2,59 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login to your wellness journey!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
-    <!-- Bulma Version 0.8.x-->
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
-    <link rel="stylesheet" type="css" href="../public/stylesheets/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login to your wellness journey!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+  <!-- Bulma Version 0.8.x-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="css" href="../public/stylesheets/style.css">
 </head>
 
 <body>
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand brand-text">
-      My Wellness Journey!
-    </div>
-    <div id="navMenu" class="navbar-menu">
-      <div class="navbar-start">
-        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false" href="/index">
-          Home
-        </a>
-        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false" href="/member">
-          Profile
-        </a>
-      </div>
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item is-hoverable">
-        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false">
-          Logout
-        </a>
-      </div>
-    </div>
-  </nav>
+  <section class="hero is-success is-fullheight" style="background-color: rebeccapurple;">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-4 is-offset-4">
+          <h3 class="title has-text-white">Login</h3>
+          <hr class="login-hr">
+          <p class="subtitle has-text-white">Please login to proceed.</p>
+          <div class="box">
 
-    <section class="hero is-success is-fullheight" style= "background-color: rebeccapurple;"
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="column is-4 is-offset-4">
-                    <h3 class="title has-text-white">Login</h3>
-                    <hr class="login-hr">
-                    <p class="subtitle has-text-white">Please login to proceed.</p>
-                    <div class="box">
-                        
-                        <form>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
-                                </div>
-                            </div>
-
-
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Your Password">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="checkbox">
+            <form>
+              <div class="field">
+                <div class="control">
+                  <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input is-large" type="password" placeholder="Your Password">
+                </div>
+              </div>
+              <div class="field">
+                <label class="checkbox">
                   <input type="checkbox">
                   Remember me
                 </label>
-                            </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                        </form>
-                    </div>
-                    <p class="has-text-grey">
-                        <a href="../">Sign Up</a> &nbsp;·&nbsp;
-                        <a href="../">Forgot Password</a> &nbsp;·&nbsp;
-                        <a href="../">Need Help?</a>
-                    </p>
-                </div>
-            </div>
+              </div>
+              <button class="button is-block is-info is-large is-fullwidth">Login <i class="fa fa-sign-in"
+                  aria-hidden="true"></i></button>
+            </form>
+          </div>
+          <p class="has-text-grey">
+            <a href="../">Sign Up</a> &nbsp;·&nbsp;
+            <a href="../">Forgot Password</a> &nbsp;·&nbsp;
+            <a href="../">Need Help?</a>
+          </p>
         </div>
-    </section>
-    <script async type="text/javascript" src="../js/bulma.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
+      </div>
+    </div>
+  </section>
+  <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
 
 </html>
