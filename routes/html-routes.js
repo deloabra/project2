@@ -11,7 +11,9 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("signup", {object:req});
+    else{
+      res.render("signup", {object:req});
+    }
   });
 
   app.get("/index", function(req, res) {
@@ -19,7 +21,9 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index",{object:req});
     }
-    // res.render("signup", {object:req});
+    else{
+      res.render("signup", {object:req});
+    }
   });
 
   app.get("/login", function(req, res) {
@@ -27,7 +31,9 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("login", {object:req});
+    else{
+      res.render("login", {object:req});
+    }
   });
 
 
