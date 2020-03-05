@@ -3,8 +3,7 @@ module.exports = function(sequelize, DataTypes){
     message: DataTypes.TEXT
   }, {});
   messages.associate = function(models) {
-    // associations can be defined here
-    models;
+    messages.belongsTo(models.User);
   };
   return messages;
 };
