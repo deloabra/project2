@@ -40,10 +40,18 @@ module.exports = function(app) {
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        email: req.user.email,
-        id: req.user.id
-      });
+      db.User.findAll(
+        {
+          where: {
+            id: req.user.id
+          }
+        },
+        {
+          attributes: ["id", "email", "name", "interest", "goal", "goalUnit", "goalProgress", "goalCreatedAt"]
+        })
+        .then(function(data){
+          res.json(data[0]);
+        });
     }
   });
 
@@ -76,7 +84,7 @@ module.exports = function(app) {
   //Updates the goal progress
   app.patch("/api/goalUpdate", function(req, res){
     db.User.update({goalProgress: req.body.goalProgress},
-      {where: {id: req.body.id}})
+      {where: {id: req.user.id}})
       .then(function(result){
         if(result.affectedRows === 0){
           res.status(500).end();
