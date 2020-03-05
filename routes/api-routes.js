@@ -60,7 +60,7 @@ module.exports = function(app) {
     {
       where: {
         //change this to user.id
-        id: req.body.id
+        id: req.user.id
       }
     })
       .then(function(result){
@@ -88,7 +88,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/messages", function(req, res){
-    db.messages.findAll()
+    db.messages.findAll({include: db.User})
       .then(function(messages){
         res.json(messages);
       });
