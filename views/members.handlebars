@@ -38,7 +38,7 @@
       
       <div class="box content">
         <article class="post">
-          <h4> {{messages}} </h4>
+          <h4>  </h4>
           <div class="media">
             <div class="media-content">
               <div class="content">
@@ -55,7 +55,7 @@
     </div>
     <div class="box content">
       <article class="post">
-        <h4> {{messages}} </h4>
+        <h4>  </h4>
         <div class="media">
           <div class="media-content">
             <div class="content">
@@ -72,12 +72,26 @@
               </div>
             </div>
           </div>
-    
         </div>
       </article>
     </div>
     </div>
     </div>
+    {{#each messages}}
+          <div class="box content">
+        <article class="post">
+          <h4> {{message}} </h4>
+          <div class="media">
+            <div class="media-content">
+              <div class="content">
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    </div>
+    {{/each}}
   </section>
 
 
