@@ -35,19 +35,19 @@
       <div id="goalBox" class="box content">
         <article class="post">
           <div id="goalText"> place holder for goal </div>
-          <div id="progressBar"> place holder for progress bar </div>
+          <div id="container"></div>
           <div class="field">
+            <div class="field">
+              <h4>update goal </h4>
+              <div class="control">
+                <input id="updateGoal" class="input" type="number" placeholder="Text input">
+              </div>
               <div class="field">
-                <h4>update goal </h4>
                 <div class="control">
-                  <input id="updateGoal" class="input" type="number" placeholder="Text input">
-                </div>
-                <div class="field">
-                  <div class="control">
-                    <button id="updateGoalButton" class="button is-link">Submit</button>
-                  </div>
+                  <button id="updateGoalButton" class="button is-link">Submit</button>
                 </div>
               </div>
+            </div>
         </article>
       </div>
     </div>
@@ -93,7 +93,7 @@
     {{/each}}
   </section>
 
-
+  <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
 
