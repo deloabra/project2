@@ -10,8 +10,6 @@ $(document).ready(function() {
           data.goalUnit === "Distance" ? "Miles" : "Hours"
         }</h3>`
       );
-      // progressbar.js@1.0.0 version is used
-      // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
       var bar = new ProgressBar.Line(container, {
         strokeWidth: 4,
@@ -23,8 +21,6 @@ $(document).ready(function() {
         svgStyle: { width: "100%", height: "100%" },
         text: {
           style: {
-            // Text color.
-            // Default: same as stroke color (options.color)
             color: "#999",
             position: "absolute",
             right: "0",
@@ -36,13 +32,10 @@ $(document).ready(function() {
           autoStyleContainer: false
         },
         from: { color: "#FFEA82" },
-        to: { color: "#ED6A5A" },
-        step: (state, bar) => {
-          bar.setText(Math.round(bar.value() * 100) + " %");
-        }
+        to: { color: "#ED6A5A" }
       });
 
-      bar.animate(1.0); // Number from 0.0 to 1.0
+      bar.animate(data.goalProgress/data.goal); // Number from 0.0 to 1.0
     }
 
     $("#newMessageSubmitButton").on("click", function(event) {
