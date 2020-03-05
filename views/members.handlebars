@@ -33,15 +33,15 @@
     </div>
   </nav>
   <section class="container is-fluid">
-    <h1 class="title is-1">Welcome <span class="member-name"></span></h1>
+    {{!-- <h1 class="title is-1">Welcome <span class="member-name"></span></h1> --}}
     <div class="columns">
       <div class="column is-3">
         <a class="button is-primary is-block is-alt is-large" href="#">New Goal</a>
         <aside class="menu">
           <p class="menu-label">
-            Tags
+          
           </p>
-          <ul class="menu-list">
+          {{!-- <ul class="menu-list">
             <li><span class="tag is-primary is-medium ">Dashboard</span></li>
             <li><span class="tag is-link is-medium ">Customers</span></li>
             <li><span class="tag is-light is-danger is-medium ">Authentication</span></li>
@@ -49,13 +49,13 @@
             <li><span class="tag is-success is-medium ">Transfers</span></li>
             <li><span class="tag is-warning is-medium ">Balance</span></li>
             <li><span class="tag is-medium ">Question</span></li>
-          </ul>
+          </ul> --}}
         </aside>
       </div>
       <div class="column is-9">
         <div class="box content">
           <article class="post">
-            <h4>Bulma: How do you center a button in a box?</h4>
+            <h4>Your latest goal! {{activity}} for {{time/distance}} </h4>
             <div class="media">
               <div class="media-left">
                 <p class="image is-32x32">
@@ -65,8 +65,8 @@
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a href="#">@jsmith</a> replied 34 minutes ago &nbsp;
-                    <span class="tag">Question</span>
+                    <span class= "member-name is-size-6"></span> YOU CAN DO IT! &nbsp;
+                    {{!-- <span class="tag">Question</span> --}}
                   </p>
                 </div>
               </div>
