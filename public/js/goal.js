@@ -29,4 +29,21 @@ $(document).ready(function(){
     event.preventDefault();
     window.location.replace("/members");
   });
+
+
+  $(".radio").on("click", function(event) {
+    // event.preventDefault();
+    var k = $("input[name=question]:checked").val();
+    if (k === "Distance") {
+      $("#goal-amount")
+        .attr("placeholder", "Please input your Miles");
+    } else if (k === "Time") {
+      $("#goal-amount")
+        .attr("placeholder", "Please input your Hours");
+    } else {
+      $("#goal-amount")
+        .attr("placeholder", "Input miles or hours");
+    }
+    console.log("test");
+  });
 });
