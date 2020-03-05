@@ -88,7 +88,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/messages", function(req, res){
-    db.messages.findAll()
+    db.messages.findAll({include: db.User})
       .then(function(messages){
         res.json(messages);
       });
