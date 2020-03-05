@@ -84,7 +84,7 @@ module.exports = function(app) {
   //Updates the goal progress
   app.patch("/api/goalUpdate", function(req, res){
     db.User.update({goalProgress: req.body.goalProgress},
-      {where: {id: req.body.id}})
+      {where: {id: req.user.id}})
       .then(function(result){
         if(result.affectedRows === 0){
           res.status(500).end();

@@ -28,6 +28,19 @@ $(document).ready(function() {
 
     $("#updateGoalButton").on("click", function(event){
       event.preventDefault();
+
+      const progressData = {
+        goalProgress: data.goalProgress + parseInt($("#updateGoal").val())
+      };
+
+      $.ajax({
+        url: "/api/goalUpdate",
+        type: "PATCH",
+        data: progressData
+      })
+        .then(function(){
+          window.location.reload();
+        });
     });
   });
 });
