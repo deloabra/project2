@@ -36,13 +36,13 @@ $(document).ready(function(){
     var k = $("input[name=question]:checked").val();
     if (k === "Distance") {
       $("#goal-amount")
-        .attr("placeholder", "Please input your Miles");
+        .attr("placeholder", "Please input your miles");
     } else if (k === "Time") {
       $("#goal-amount")
-        .attr("placeholder", "Please input your Hours");
+        .attr("placeholder", "Please input your minutes");
     } else {
       $("#goal-amount")
-        .attr("placeholder", "Input miles or hours");
+        .attr("placeholder", "Input miles or minutes");
     }
     console.log("test");
   });

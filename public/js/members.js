@@ -7,10 +7,10 @@ $(document).ready(function() {
     } else {
       $("#goalText").html(
         `<h3>My Goal: ${data.interest} for ${data.goal} ${
-          data.goalUnit === "Distance" ? "Miles" : "Hours"
+          data.goalUnit === "Distance" ? "Miles" : "Minutes"
         }</h3>
         <h4>Current Progress: ${data.goalProgress} ${
-  data.goalUnit === "Distance" ? "Miles" : "Hours"
+  data.goalUnit === "Distance" ? "Miles" : "Minutes"
 }</h4>`
       );
 
