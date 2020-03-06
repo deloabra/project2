@@ -33,7 +33,7 @@
 
 ## link to deployed Heroku 
 
-
+[Heroku Deployed Application](https://project-2-4.herokuapp.com/members)
 
 
 ## Gif displaying functionality 
