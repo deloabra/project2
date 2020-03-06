@@ -70,6 +70,10 @@ $(document).ready(function() {
         window.location.reload();
       });
     });
+
+    $("#username").html(
+      `Hello, ${data.name}!`
+    );
   });
 });
 
