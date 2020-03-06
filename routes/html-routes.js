@@ -44,8 +44,7 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     db.sequelize.query("select messages.message, Users.email, Users.name FROM messages INNER JOIN Users on messages.UserId = Users.id")
       .then(function(results){
-        console.log(results[0]);
-        res.render("members", {messages:results[0]});
+        res.render("members", {messages:(results[0].reverse().splice(0,10))});
       });
   });
 };

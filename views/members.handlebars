@@ -16,14 +16,14 @@
     </div>
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-start">
-        <a role="button" class="navbar-item" aria-label="menu" aria-expanded="false" href="/index">
+        <a role="button" class="navbar-item has-text-white" aria-label="menu" aria-expanded="false" href="/index">
           Create a new goal
         </a>
       </div>
     </div>
     <div class="navbar-end">
       <div class="navbar-item is-hoverable">
-        <a href="/logout" role="button" class="navbar-item" aria-label="menu" aria-expanded="false">
+        <a href="/logout" role="button" class="navbar-item has-text-white" aria-label="menu" aria-expanded="false">
           Logout
         </a>
       </div>
@@ -79,6 +79,7 @@
     {{#each messages}}
     <div class="box content">
       <article class="post">
+        <h3>{{name}}</h3>
         <h4> {{message}} </h4>
         <div class="media">
           <div class="media-content">
