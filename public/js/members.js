@@ -6,19 +6,22 @@ $(document).ready(function() {
       );
     } else {
       $("#goalText").html(
-        `<h3>My Goal: Do ${data.interest} for ${data.goal} ${
-          data.goalUnit === "Distance" ? "Miles" : "Hours"
-        }</h3>`
+        `<h3>My Goal: ${data.interest} for ${data.goal} ${
+          data.goalUnit === "Distance" ? "Miles" : "Minutes"
+        }</h3>
+        <h4>Current Progress: ${data.goalProgress} ${
+  data.goalUnit === "Distance" ? "Miles" : "Minutes"
+}</h4>`
       );
 
       var bar = new ProgressBar.Line(container, {
-        strokeWidth: 4,
+        strokeWidth: 1,
         easing: "easeInOut",
         duration: 1400,
         color: "#FFEA82",
         trailColor: "#eee",
         trailWidth: 1,
-        svgStyle: { width: "100%", height: "100%" },
+        svgStyle: { width: "100%", height: "1%" },
         text: {
           style: {
             color: "#999",
@@ -32,10 +35,14 @@ $(document).ready(function() {
           autoStyleContainer: false
         },
         from: { color: "#FFEA82" },
-        to: { color: "#ED6A5A" }
+        to: { color: "#008000" },
+        step: (state, bar) => {
+          bar.path.setAttribute('stroke', state.color);}
       });
 
-      bar.animate(data.goalProgress/data.goal); // Number from 0.0 to 1.0
+      bar.animate(
+        data.goalProgress / data.goal > 1 ? 1 : data.goalProgress / data.goal
+      ); // Number from 0.0 to 1.0
     }
 
     $("#newMessageSubmitButton").on("click", function(event) {
@@ -70,6 +77,10 @@ $(document).ready(function() {
         window.location.reload();
       });
     });
+
+    $("#username").html(
+      `Hello, ${data.name}!`
+    );
   });
 });
 
