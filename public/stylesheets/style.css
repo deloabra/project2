@@ -8,7 +8,7 @@ html,body {
 .navbar.is-fixed-top {
   color: white;
   font-size: 18px;
-  background: hsl(275.5, 85.8%, 52.9%);
+  background: rebeccapurple;
 }
 .hero.is-success {
   background: #F2F6FA;
