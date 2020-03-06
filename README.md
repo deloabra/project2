@@ -1,5 +1,19 @@
 # Project 2: My Wellness Journey 
 
+## User Story 
+
+* GIVEN that you have a goal you want to achieve 
+
+* THEN you create an account, make a new goal, and track your progress! 
+
+* WHEN you write down your goals you are much more likely to achieve them
+
+* WHEN you write down your goals you are forced to clarify what you want 
+
+* YOU will be motivated to take action 
+
+* YOU will be able to see and celebrate your progress! 
+
 ## Application functionality 
 
 * Uses a Node and Express server
@@ -23,6 +37,7 @@
 
 
 ## Gif displaying functionality 
+![2020-03-06 10 14 06](https://user-images.githubusercontent.com/59029999/76100992-458e3400-5f93-11ea-90e1-f4f70bb34018.gif)
 
 
 
@@ -30,4 +45,4 @@
 - create a award system to reward you for your finished goals 
 - create a log of finished goals to go back and see
 - add friends and comment on messages 
-
+- format messages with timestamp/comment functionality 
