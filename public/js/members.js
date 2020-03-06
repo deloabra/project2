@@ -35,7 +35,7 @@ $(document).ready(function() {
         to: { color: "#ED6A5A" }
       });
 
-      bar.animate(data.goalProgress/data.goal); // Number from 0.0 to 1.0
+      bar.animate(data.goalProgress/data.goal >1?1:data.goalProgress/data.goal); // Number from 0.0 to 1.0
     }
 
     $("#newMessageSubmitButton").on("click", function(event) {
